@@ -3,6 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
+
         double income= 500;
         double remainder;
 	Tax []result=new Tax[3];

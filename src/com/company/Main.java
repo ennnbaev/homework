@@ -5,12 +5,14 @@ public class Main {
     public static void main(String[] args) {
 
         double income= 500;
-        double remainder;
+        double remainder=income;
 	Tax []result=new Tax[3];
 	result[0]=new FixedTax();
 	result[1]=new TaxlnPercentage();
 	result[2]=new DynamicTax();
-	remainder=income-result[0].calculate(income)-result[1].calculate(income)-result[2].calculate(income);
+		for (Tax tax : result) {
+			remainder -= tax.calculate(income);
+		}
 		System.out.println(remainder);
     }
 }

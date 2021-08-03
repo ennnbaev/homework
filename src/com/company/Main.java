@@ -10,7 +10,7 @@ public class Main {
 	result[0]=new FixedTax();
 	result[1]=new TaxlnPercentage();
 	result[2]=new DynamicTax();
-	remainder=income-result[0].calculate(income)-result[1].calculate(income)-(((result[2].calculate(income))/100)*income);
+	remainder=income-result[0].calculate(income)-result[1].calculate(income)-result[2].calculate(income);
 		System.out.println(remainder);
     }
 }
